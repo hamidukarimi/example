@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple UI Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 50px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-left: 10px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Welcome to My Simple UI</h1>
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <button onclick="showMessage()">Greet</button>
+
+  <p id="message"></p>
+
+  <script>
+    function showMessage() {
+      const name = document.getElementById('nameInput').value;
+      const messageElement = document.getElementById('message');
+
+      if (name.trim() !== "") {
+        messageElement.textContent = `Hello, ${name}! 👋`;
+      } else {
+        messageElement.textContent = "Please enter your name.";
+      }
+    }
+  </script>
+
+</body>
+</html>
